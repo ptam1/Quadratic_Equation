@@ -26,16 +26,17 @@ void QuadraticEquation::quadraticEquation(int a, int b, int c)
 
 void QuadraticEquation::quadraticFormula(int a, int b, int c)
 {
-	posX = ((-b) + sqrt(pow(b,2) - (4*a*c)));
-	negX = ((-b) - sqrt(pow(b,2) - (4*a*c)));
+	posX = ((-b) + sqrt(pow(b,2) - (4*a*c)))/(2*a);
+	negX = ((-b) - sqrt(pow(b,2) - (4*a*c)))/(2*a);
 }
 void QuadraticEquation::evalExpression()
 {
 	
 }
-void QuadraticEquation::findCoefficient()
+void QuadraticEquation::findCoefficient(string expression[])
 {
-	
+	cout << "a: " << expression[0] << endl;
+	cout << "b: " << expression[]
 }
 int QuadraticEquation::numberOfZeros()
 {
