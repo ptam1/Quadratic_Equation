@@ -8,27 +8,29 @@ CS 5040
 #define QUADRATICEQUATION_H_INCLUDED
 
 using namespace std;
-public:
+
 
 class QuadraticEquation
 {
+	public:
 	QuadraticEquation();
 	~QuadraticEquation();
 //Constructor
-void quadraticEquation(int a, int b, int c)
+void quadraticEquation(int a, int b, int c);
 
 //
-void quadraticFormula(int a, int b, int c)
-void evalExpression()
-void findCoefficient()
-int numberOfZeros()
-int realZeros()
+void quadraticFormula(int a, int b, int c);
+void expression(int a, int b, int c);
+void evalExpression();
+void findCoefficient(int num, string expression[]);
+int numberOfZeros();
+int realZeros();
 
 
 private:
 int a, b, c;
 int x;
 string expression;
-}
+};
 
 #endif		//QUADRATICEQUATION_H

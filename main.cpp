@@ -11,6 +11,36 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello nrgnrngrengrng" << endl;
+	string quadExpr[9];
+	string user_input;
+	int a, b, c;
+	QuadraticEquation expression;
+	
+	cout << "What is Your 'a' Variable" << endl;
+	cin >> a;
+	cout << "What is Your 'b' Variable" << endl;
+	cin >> b;
+	cout << "What is Your 'c' Variable" << endl;
+	cin >> c;
+	expression.expression(a,b,c);
+	
+	cout << "Commands: Find Coefficient, Evaluate Specified Value, Number of Real Zeros, Real Zeros, Exit" << endl;
+	getline(cin, user_input);
+	
+	while(user_input != "Exit")
+	{
+		if(user_input == "Find Coefficient")
+		{
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	return 0;
 }
