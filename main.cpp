@@ -4,8 +4,8 @@ CS 5040
 */
 
 #include <iostream>
-#include <QuadraticEquation.h>
-
+#include "QuadraticEquation.h"
+#include <string>
 
 using namespace std;
 
@@ -31,7 +31,20 @@ int main()
 	{
 		if(user_input == "Find Coefficient")
 		{
+			expression.findCoefficient(a,b,c);
+		}
+		else if(user_input == "Evaluate Specified Value")
+		{
+			cout << "Which Coefficient Would You Like to Evaluate?" << endl;
 			
+		}
+		else if(user_input == "Number of Real Zeros")
+		{
+			expression.numberOfZeros(a, b, c);
+		}
+		else if(user_input == "Real Zeros")
+		{
+			expression.realZeros(a, b, c);
 		}
 	}
 	
