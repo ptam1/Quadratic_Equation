@@ -4,7 +4,7 @@ CS 5040
 */
 
 
-#include <iostream>
+
 #include <cmath>
 #include "QuadraticEquation.h"
 
@@ -16,7 +16,7 @@ QuadraticEquation::~QuadraticEquation()
 {
 }
 
-void QuadraticEquation::QuadraticEquation(int a, int b, int c)
+QuadraticEquation::QuadraticEquation(double a, double b, double c)
 {
 	a = a;
 	b = b;
@@ -24,12 +24,12 @@ void QuadraticEquation::QuadraticEquation(int a, int b, int c)
 	
 }
 
-void QuadraticExpression::expression(int a, int b, int c)
+void QuadraticExpression::expression(double a, double b, double c)
 {
 	cout << "Your Quadratic Expression is:" << a << "x^2" << "+" << b << "x" << "+" << c << endl;
 }
 
-void QuadraticEquation::evalExpression(string input)
+void QuadraticEquation::evalExpression(char input)
 {
 	if(input == "a")
 	{
@@ -39,20 +39,20 @@ void QuadraticEquation::evalExpression(string input)
 	{
 		
 	}
-	else
+	else if()
 		{
 		
 	}
 }
 
-void QuadraticEquation::findCoefficient(int a, int b, int c)
+void QuadraticEquation::findCoefficient(double a, double b, double c);
 {
 	cout << "a: " << a << endl;
 	cout << "b: " << b << endl;
 	cout << "c:"  << c << endl;
 }
 
-int QuadraticEquation::numberOfZeros(int a, int b, int c)
+void QuadraticEquation::numberOfZeros(double a, double b, double c)
 {
 	discriminant = ((pow(b,2)) - (4*a*c));
 	
@@ -70,8 +70,18 @@ int QuadraticEquation::numberOfZeros(int a, int b, int c)
 	}
 }
 
-int QuadraticEquation::realZeros(int a, int b, int c)
+void QuadraticEquation::realZeros(double a, double b, double c)
 {
+	discriminant = ((pow(b,2)) - (4*a*c));
+	
+	if((discriminant == 0) || (discriminant > 0))
+	{
 	x1 = ((-b) + sqrt(pow(b,2) - (4*a*c)))/(2*a);
 	x2= ((-b) - sqrt(pow(b,2) - (4*a*c)))/(2*a);
+	cout << "The Real Zeros are" << x1 << x2 << endl;
+	}
+	else
+	{
+		cout << "There Are No Real Zeros." << endl;
+	}
 }
