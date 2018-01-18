@@ -21,35 +21,24 @@ QuadraticEquation::QuadraticEquation(double a, double b, double c)
 	a = a;
 	b = b;
 	c = c;
-	
 }
 
-void QuadraticExpression::expression(double a, double b, double c)
+void QuadraticEquation::expression(double a, double b, double c)
 {
 	cout << "Your Quadratic Expression is:" << a << "x^2" << "+" << b << "x" << "+" << c << endl;
 }
 
-void QuadraticEquation::evalExpression(char input)
+void QuadraticEquation::evalExpression(double input, int a, int b, int c)
 {
-	if(input == "a")
-	{
-		
-	}
-	else if(input == "b")
-	{
-		
-	}
-	else if()
-		{
-		
-	}
+	double answer = ((a)*pow(input, 2) + ((b) * (x) + c));
+	cout << "The Answer is: " << answer << endl;
 }
 
 void QuadraticEquation::findCoefficient(double a, double b, double c);
 {
 	cout << "a: " << a << endl;
 	cout << "b: " << b << endl;
-	cout << "c:"  << c << endl;
+	cout << "c: " << c << endl;
 }
 
 void QuadraticEquation::numberOfZeros(double a, double b, double c)
