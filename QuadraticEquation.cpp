@@ -3,10 +3,9 @@ Homework 1
 CS 5040
 */
 
-
-
-#include <cmath>
 #include "QuadraticEquation.h"
+#include <cmath>
+
 
 QuadraticEquation::QuadraticEquation()
 {
@@ -25,16 +24,31 @@ QuadraticEquation::QuadraticEquation(double a, double b, double c)
 
 void QuadraticEquation::expression(double a, double b, double c)
 {
+	if(c < 0)
+	{
+		cout << "Your Quadratic Expression is:" << a << "x^2" << "+" << b << "x" << "+" << "(" << c << ")" << endl;
+	}
+	else if(b < 0)
+	{
+		cout << "Your Quadratic Expression is:" << a << "x^2" << "+" << "(" << b << ")" << "x" << "+" << c << endl;
+	}
+	else if((c < 0) && (b <0))
+	{
+		cout << "Your Quadratic Expression is:" << a << "x^2" << "+" << "(" << b << ")" << "x" << "+" << "(" << c << ")" << endl;
+	}
+	else
+	{
 	cout << "Your Quadratic Expression is:" << a << "x^2" << "+" << b << "x" << "+" << c << endl;
+	}
 }
 
-void QuadraticEquation::evalExpression(double input, int a, int b, int c)
+void QuadraticEquation::evalExpression(double input, double a, double b, double c)
 {
-	double answer = ((a)*pow(input, 2) + ((b) * (x) + c));
+	double answer = (((a)*pow(input, 2)) + (((b) * input) + c));
 	cout << "The Answer is: " << answer << endl;
 }
 
-void QuadraticEquation::findCoefficient(double a, double b, double c);
+void QuadraticEquation::findCoefficient(double a, double b, double c)
 {
 	cout << "a: " << a << endl;
 	cout << "b: " << b << endl;
@@ -43,7 +57,7 @@ void QuadraticEquation::findCoefficient(double a, double b, double c);
 
 void QuadraticEquation::numberOfZeros(double a, double b, double c)
 {
-	discriminant = ((pow(b,2)) - (4*a*c));
+	 discriminant = ((pow(b,2)) - (4*a*c));
 	
 	if(discriminant < 0)
 	{
@@ -65,9 +79,9 @@ void QuadraticEquation::realZeros(double a, double b, double c)
 	
 	if((discriminant == 0) || (discriminant > 0))
 	{
-	x1 = ((-b) + sqrt(pow(b,2) - (4*a*c)))/(2*a);
-	x2= ((-b) - sqrt(pow(b,2) - (4*a*c)))/(2*a);
-	cout << "The Real Zeros are" << x1 << x2 << endl;
+	double x1 = ((-b) + sqrt(pow(b,2) - (4*a*c)))/(2*a);
+	double x2= ((-b) - sqrt(pow(b,2) - (4*a*c)))/(2*a);
+	cout << "The Real Zeros are " << x1 << " " << "and" << " "<< x2 << endl;
 	}
 	else
 	{

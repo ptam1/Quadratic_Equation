@@ -4,8 +4,9 @@ CS 5040
 */
 
 
-#ifndef QUADRATICEQUATION_H_INCLUDED
-#define QUADRATICEQUATION_H_INCLUDED
+#ifndef QUADRATICEQUATION_H
+#define QUADRATICEQUATION_H
+#include <iostream>
 
 using namespace std;
 
@@ -16,21 +17,18 @@ class QuadraticEquation
 	QuadraticEquation();
 	~QuadraticEquation();
 //Constructor
-void quadraticEquation(int a, int b, int c);
+QuadraticEquation(double a, double b, double c);
 
-//
-void quadraticFormula(int a, int b, int c);
-void expression(int a, int b, int c);
-void evalExpression();
-void findCoefficient(int num, string expression[]);
-int numberOfZeros();
-int realZeros();
+void expression(double a, double b, double c);
+void evalExpression(double input, double a, double b, double c);
+void findCoefficient(double a, double b, double c);
+void numberOfZeros(double a, double b, double c);
+void realZeros(double a, double b, double c);
 
 
 private:
-int a, b, c;
-int x;
-string expression;
+double a, b, c;
+double discriminant;
 };
 
 #endif		//QUADRATICEQUATION_H
