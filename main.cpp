@@ -31,10 +31,12 @@ int main()
 	{
 		if(user_input == "Find Coefficient")
 		{
+			cout << "Testing findCoefficient() Member Function." << endl;
 			expression.findCoefficient(a,b,c);
 		}
 		else if(user_input == "Evaluate Specified Value")
 		{
+			cout << "Testing evalExpression() Member Function." << endl;
 			cout << "What is the 'x' Value You Want To Enter?" << endl;
 			cin >> x;
 			expression.evalExpression(x, a, b, c);
@@ -42,21 +44,19 @@ int main()
 		}
 		else if(user_input == "Number of Real Zeros")
 		{
+			cout << "Testing numberOfZeros() Member Function." << endl;
 			expression.numberOfZeros(a, b, c);
 		}
 		else if(user_input == "Real Zeros")
 		{
-			expression.realZeros(a, b, c);
-		}
-		else
-		{
-			cout << " Enter A Valid Command!" << endl;
-			getline(cin, user_input);
+			cout << "Testing realZeros() Member Function." << endl;
+ 			expression.realZeros(a, b, c);
 		}
 		
 		cout << "Enter Another Command." << endl;
 		getline(cin, user_input);
-	}
+	}  
 	
 	return 0;
 }
+
